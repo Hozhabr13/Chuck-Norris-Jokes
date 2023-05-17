@@ -1,0 +1,77 @@
+@import './variable.scss';
+
+.container {
+      min-height: 400px;
+      width: 100%;
+      max-width: 1200px;
+      border: 1px solid $gray-light;
+      border-radius: 8px;
+      margin: 0 auto;
+      padding: 2rem;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__favorite-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.favorite-star {
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: $gray-thick;
+    &.active {
+        color: $orange;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray-light;
+    a.nav-item{ 
+        display: flex;
+        flex-basis: 20%;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: 500;
+        &.active {
+            color: $green
+        }
+    }
+}
+
+.counter-wrapper {
+    display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    time {
+        display: flex;
+        font-size: 2rem;
+        font-weight: 500;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0.5rem;
+    }
+    }
+
+    .list-fallback {
+        font-size: 1rem;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        padding: 1.5rem;
+    }

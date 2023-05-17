@@ -1,0 +1,21 @@
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: node:16
+  before_script:
+    - apt-get update && apt-get install -y yarn
+  script:
+    - yarn install
+    - yarn test
+
+build:
+  stage: build
+  image: node:16
+  before_script:
+    - apt-get update && apt-get install -y yarn
+  script:
+    - yarn install
+    - yarn build
